@@ -117,6 +117,21 @@ section[data-testid="stSidebar"] .block-container { padding-top: 2rem; }
 .place-card .place-ko { color: #132257; font-size: 24px; font-weight: 800; line-height: 1.45; margin: 13px 0; word-break: keep-all; }
 .place-card p { font-size: 14px; line-height: 1.85; color: #475570; }
 .footer-note { color: #8A94A8; font-size: 11px; margin-top: 24px; border-top: 1px solid #E2E7F0; padding-top: 12px; }
+/* 일반 노트북의 낮은 화면에서도 마지막 수업까지 읽을 수 있는 배치입니다. */
+@media (min-width: 1000px) and (max-height: 800px) {
+    .block-container { padding-top: 1.1rem; }
+    h1 { font-size: 2.3rem !important; padding-top: 0 !important; padding-bottom: .25rem !important; }
+    [data-testid="stMetric"] { padding: 7px 14px; }
+    [data-testid="stMetricValue"] { font-size: 23px; }
+    .calendar-head { height: 34px; }
+    .calendar-day { padding-top: 7px; }
+    .calendar-body { height: 385px; }
+    .day-column { background-size: auto 100%; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 16.5px, #EDF0F5 16.5px, #EDF0F5 17.5px); }
+    .class-block { padding: 3px 5px; }
+    .class-name { font-size: 11px; line-height: 1.1; }
+    .class-time { font-size: 9px; line-height: 1.15; margin-top: 1px; }
+    .class-room { font-size: 9px; line-height: 1.15; }
+}
 @media (max-width: 700px) {
     .block-container { padding-top: 1.4rem; }
     .profile-copy { font-size: 16px; }
